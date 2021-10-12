@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "7f6c4553-b353-4744-b80b-092d22b3b484",
+		"name": "szkola",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "wszyscy uczniowie klasy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8081/api/pupils/C",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"pupils",
+						"C"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "uczniowie grupy językowej",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8081/api/pupils/C/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"pupils",
+						"C",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wychowawcy klas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8081/api/tutors",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"tutors"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

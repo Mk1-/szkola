@@ -1,0 +1,30 @@
+version: '3'
+services:
+  db:
+    image: mariadb:latest
+    restart: always
+    hostname: database
+    container_name: szkola-db
+    volumes:
+      - ./db/:/docker-entrypoint-initdb.d/:ro
+    environment:
+      - MYSQL_ROOT_PASSWORD=mysecretpassword
+      - MYSQL_DATABASE=szkola
+    networks:
+      - localnet  
+
+  app:
+    build:
+      context: .
+      dockerfile: PHP.Dockerfile
+    hostname: app
+    container_name: szkola-app
+    volumes:
+      - ./prepare.sh:/var/prog/prepare.sh:ro
+    networks:
+      - localnet
+    ports:
+      - "8081:8000"
+
+networks:
+  localnet:

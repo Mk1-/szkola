@@ -22,6 +22,6 @@ class TeacherController extends AbstractController
         if (count($tutors) > 0) {
             return $this->getActionSuccess(Response::HTTP_OK, $tutors);
         }
-        return $this->getActionFailure(Response::HTTP_NOT_FOUND, "W bazie danych brak informacji o wychowacach.");
+        return $this->getActionFailure(Response::HTTP_NOT_FOUND, "W bazie danych brak informacji o wychowawcach.");
     }
 }
